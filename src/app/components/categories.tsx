@@ -23,42 +23,42 @@ const Categories = () => {
       </div>
 
       <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4'>
-        <div className='border-2 p-2 hover:shadow-lg transition duration-300'>
+        <div className='border-2 p-2 hover:shadow-lg hover:bg-[#db4444] hover:text-white transition duration-300'>
           <div className='flex items-center justify-center'>
             <FiSmartphone className="w-16 h-16 md:w-24 md:h-24 lg:w-32 lg:h-32"/>
           </div>
           <p className="text-center mt-2">cell phone</p>
         </div>
 
-        <div className='border-2 p-2 hover:shadow-lg transition duration-300'>
+        <div className='border-2 p-2 hover:shadow-lg hover:bg-[#db4444] hover:text-white transition duration-300'>
           <div className='flex items-center justify-center'>
             <FiMonitor className="w-16 h-16 md:w-24 md:h-24 lg:w-32 lg:h-32"/>
           </div>
           <p className="text-center mt-2">computers</p>
         </div>
 
-        <div className='border-2 p-2 hover:shadow-lg transition duration-300'>
+        <div className='border-2 p-2 hover:shadow-lg hover:bg-[#db4444] hover:text-white transition duration-300'>
           <div className='flex items-center justify-center'>
             <MdWatch className="w-16 h-16 md:w-24 md:h-24 lg:w-32 lg:h-32"/>
           </div>
           <p className="text-center mt-2">smart watch</p>
         </div>
 
-        <div className='border-2 p-2 hover:shadow-lg transition duration-300'>
+        <div className='border-2 p-2 hover:shadow-lg hover:bg-[#db4444] hover:text-white transition duration-300'>
           <div className='flex items-center justify-center'>
             <FaCamera className="w-16 h-16 md:w-24 md:h-24 lg:w-32 lg:h-32"/>
           </div>
           <p className="text-center mt-2">Camera</p>
         </div>
 
-        <div className='border-2 p-2 hover:shadow-lg transition duration-300'>
+        <div className='border-2 p-2 hover:shadow-lg hover:bg-[#db4444] hover:text-white transition duration-300'>
           <div className='flex items-center justify-center'>
             <FaHeadphones className="w-16 h-16 md:w-24 md:h-24 lg:w-32 lg:h-32"/>
           </div>
           <p className="text-center mt-2">Head phones</p>
         </div>
 
-        <div className='border-2 p-2 hover:shadow-lg transition duration-300'>
+        <div className='border-2 p-2 hover:shadow-lg hover:bg-[#db4444] hover:text-white transition duration-300'>
           <div className='flex items-center justify-center'>
             <FaGamepad className="w-16 h-16 md:w-24 md:h-24 lg:w-32 lg:h-32"/>
           </div>
