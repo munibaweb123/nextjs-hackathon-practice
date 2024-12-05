@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
-import { FaQrcode ,FaGooglePlay } from 'react-icons/fa';
+import { FaQrcode } from 'react-icons/fa';
 
 const footer = () => {
   return (
