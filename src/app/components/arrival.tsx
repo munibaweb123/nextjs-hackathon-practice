@@ -32,7 +32,7 @@ const Arrival = () => {
                 <Image src={"/arrival/arrival2.png"} alt='arrival woman' fill className='object-cover' priority/>
               </div>
               <div className='text-white p-5 absolute z-10 max-w-[250px]'>
-                <h2 className='font-bold text-xl'>Women's Collections</h2>
+                <h2 className='font-bold text-xl'>Women&apos;s Collections</h2>
                 <p>Featured woman collections that give you another vibe.</p>
                 <h3 className='text-lg font-semibold'>Shop Now</h3> 
               </div>

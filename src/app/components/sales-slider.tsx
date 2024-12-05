@@ -9,7 +9,7 @@ const Sales = () => {
        <div className='flex gap-x-4 items-center text-[#db4444] font-bold py-4'>
        <div className='bg-[#db4444] w-[20px] h-[40px] rounded-md'></div>
 
-       <h2>Today's</h2>
+       <h2>Today&apos;s</h2>
        </div>
        <div className='flex items-center justify-between'>
         

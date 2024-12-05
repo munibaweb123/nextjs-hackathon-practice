@@ -3,7 +3,7 @@ import Link from 'next/link'
 import React, { useState } from 'react'
 import { FaSearch, FaHeart, FaShoppingCart, FaBars, FaTimes } from 'react-icons/fa'
 
-const header = () => {
+const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
@@ -64,4 +64,4 @@ const header = () => {
   )
 }
 
-export default header
+export default Header
