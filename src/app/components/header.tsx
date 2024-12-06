@@ -16,11 +16,12 @@ const Header = () => {
     setIsDropdownVisible(false);
   };
 
-  const handleClickOutside = (event: { target: any; }) => {
-    if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+  const handleClickOutside = (event: MouseEvent) => {
+    if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
       closeDropdown();
     }
   };
+  
 
   useEffect(() => {
     document.addEventListener("mousedown", handleClickOutside); // Listen for outside clicks
