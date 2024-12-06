@@ -4,7 +4,7 @@ import { FaTruck, FaHeadset, FaShieldAlt } from 'react-icons/fa';
 
 const Arrival = () => {
   return (
-    <div className='py-10 px-4 md:px-8 lg:px-16 max-w-[1440px] mx-auto'>
+    <div className='py-10 px-4 md:px-8 lg:px-16 max-w-[1170px] mx-auto'>
         <div className='flex gap-x-4 items-center text-[#db4444] font-bold py-4'>
           <div className='bg-[#db4444] w-[20px] h-[40px] rounded-md'></div>
           <h2>Featured</h2>

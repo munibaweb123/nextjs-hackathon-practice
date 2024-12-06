@@ -4,7 +4,7 @@ import { FaEye, FaRegHeart } from 'react-icons/fa'
 
 const Month = () => {
   return (
-    <div className="w-full px-4 md:px-8 lg:px-16">
+    <div className="max-w-[1170px] mx-auto w-full px-4 md:px-8 lg:px-16">
          <div className='flex gap-x-4 items-center text-[#db4444] font-bold py-4'>
             <div className='bg-[#db4444] w-[20px] h-[40px] rounded-md'></div>
             <h2>This Month</h2>

@@ -4,7 +4,7 @@ import { AiOutlineRight,AiOutlineArrowRight } from 'react-icons/ai';
 
 const Hero = () => {
   return (
-    <div className='max-w-6xl mx-auto px-4'>
+    <div className='max-w-[1170px] mx-auto px-4'>
       <div className='flex flex-col md:flex-row items-center justify-normal'>
         <ul className='border-r-2 space-y-4 w-full md:w-[217px] h-auto md:h-[344px] mb-4 md:mb-0'>
             <li className='flex gap-x-4'>Woman&apos;s Fashion <AiOutlineRight/></li>

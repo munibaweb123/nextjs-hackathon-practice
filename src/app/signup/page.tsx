@@ -3,7 +3,7 @@ import { FaGoogle } from 'react-icons/fa';
 
 const signup = () => {
   return (
-    <div className='max-w-6xl mx-auto px-10'>
+    <div className='max-w-[1170px] mx-auto px-10'>
         <div>
             <div>
 

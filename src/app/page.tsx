@@ -8,7 +8,7 @@ import Sales from "./components/sales-slider";
 
 export default function Home() {
   return (
-   <div className="max-w-6xl mx-auto">
+   <div className="max-w-[1170px] mx-auto">
     <Hero/>
     <Sales/>
     <Categories/>

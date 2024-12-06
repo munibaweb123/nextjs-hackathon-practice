@@ -6,7 +6,7 @@ import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai'
 
 const Categories = () => {
   return (
-    <div className="container mx-auto px-4">
+    <div className="container max-w-[1170px] mx-auto px-4">
       <div className='flex gap-x-4 items-center text-[#db4444] font-bold py-4'>
         <div className='bg-[#db4444] w-[20px] h-[40px] rounded-md'></div>
         <h2>Categories</h2>

@@ -5,17 +5,18 @@ import { AiOutlineArrowLeft,AiOutlineArrowRight } from 'react-icons/ai';
 
 const Sales = () => {
   return (
-    <div className='max-w-6xl mx-auto'>
+    <div className='max-w-[1170px] mx-auto'>
        <div className='flex gap-x-4 items-center text-[#db4444] font-bold py-4'>
        <div className='bg-[#db4444] w-[20px] h-[40px] rounded-md'></div>
 
        <h2>Today&apos;s</h2>
        </div>
-       <div className='flex items-center justify-between'>
+       <div className='block md:flex items-center justify-between'>
         
-        <div className='flex items-center gap-x-4 font-bold'>
+        <div className='block md:flex items-center gap-x-4 font-bold'>
         <h2 className='text-4xl font-bold flex items-center justify-start pr-10'>Flash Sales</h2>
-            <div>
+           <div className='flex gap-x-4'>
+           <div>
                 <p className='text-sm'>Days</p>
                 <h3 className='text-4xl'>03</h3>
             </div>
@@ -34,6 +35,7 @@ const Sales = () => {
                 <p className='text-sm'>Seconds</p>
                 <h3 className='text-4xl'>56</h3>
             </div>
+           </div>
         </div>
         <div className='text-black flex items-center gap-x-2'>
             <AiOutlineArrowLeft size={50} className='rounded-full p-2 bg-[#f5f5f5]'/>
