@@ -1,11 +1,31 @@
 "use client"
 import Link from 'next/link'
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { FaSearch, FaHeart, FaShoppingCart, FaBars, FaTimes } from 'react-icons/fa'
+import { MdPerson } from "react-icons/md";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isDropdownVisible, setIsDropdownVisible] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement | null>(null);// Create a reference for the dropdown container
 
+  const toggleDropdown = () => {
+    setIsDropdownVisible(!isDropdownVisible);
+  }
+  const closeDropdown = () => {
+    setIsDropdownVisible(false);
+  };
+
+  const handleClickOutside = (event: { target: any; }) => {
+    if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+      closeDropdown();
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside); // Listen for outside clicks
+    return () => document.removeEventListener("mousedown", handleClickOutside); // Cleanup
+  }, []);
   return (
     <div className='border-b-2'>
       <div className='text-[#fafafa] bg-black flex items-center justify-evenly p-2 text-sm md:text-base'>
@@ -40,7 +60,7 @@ const Header = () => {
         </nav>
 
         {/* Mobile Navigation */}
-        <nav className={`fixed top-0 right-0 h-full w-64 bg-white shadow-lg transform ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'} transition-transform duration-300 ease-in-out md:hidden`}>
+        <nav className={`fixed top-0 right-0 h-full w-72 bg-white shadow-lg transform ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'} transition-transform duration-300 ease-in-out md:hidden`}>
           <ul className='flex flex-col gap-y-4 p-8 mt-16'>
             <li><Link href={"/"}>Home</Link></li>
             <li><Link href={"/contact"}>Contact</Link></li>
@@ -58,6 +78,53 @@ const Header = () => {
           <FaSearch className='md:hidden' size={20}/>
           <FaHeart size={20} />
           <FaShoppingCart size={20} />
+          <div className="relative inline-block" ref={dropdownRef}>
+          <button
+        onClick={toggleDropdown}
+        className="p-2 rounded-full hover:bg-gray-100 focus:outline-none"
+      >
+        <MdPerson size={24} />
+      </button>
+      {isDropdownVisible && (
+        <div
+          className="absolute top-5 mt-2 w-48 bg-white shadow-lg rounded-lg border border-gray-200 z-10"
+        >
+          <ul className="py-2 text-sm text-gray-700">
+            <li>
+              <button className="block w-full text-left px-4 py-2 hover:bg-gray-100">
+                Manage My Profile
+              </button>
+            </li>
+            <li>
+              <button className="block w-full text-left px-4 py-2 hover:bg-gray-100">
+                Manage My Account
+              </button>
+            </li>
+            <li>
+              <button className="block w-full text-left px-4 py-2 hover:bg-gray-100">
+                My Orders
+              </button>
+            </li>
+            <li>
+              <button className="block w-full text-left px-4 py-2 hover:bg-gray-100">
+                My Cancellations
+              </button>
+            </li>
+            <li>
+              <button className="block w-full text-left px-4 py-2 hover:bg-gray-100">
+                My Reviews
+              </button>
+            </li>
+            <li>
+              <button className="block w-full text-left px-4 py-2 text-red-600 hover:bg-gray-100">
+                Logout
+              </button>
+            </li>
+          </ul>
+        </div>
+      )}
+      </div>
+
         </div>
       </div>
     </div>
