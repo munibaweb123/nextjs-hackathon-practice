@@ -18,10 +18,10 @@ const about = () => {
     </div>
 
     <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 pt-10'>
-        <div className='text-center flex flex-col items-center border-2 p-2'>
+        <div className='text-center flex flex-col items-center border-2 p-2 hover:bg-[#bd4444] hover:text-white'>
           <div className='w-[80px] h-[80px] bg-[rgba(47,46,48,0.3)] flex items-center justify-center rounded-full'>
-            <div className='bg-black rounded-full p-2 flex items-center justify-center w-[58px] h-[58px] mx-auto'>
-              <FaShop size={35} color='white' />
+            <div className='bg-black text-white hover:bg-white hover:text-black rounded-full p-2 flex items-center justify-center w-[58px] h-[58px] mx-auto'>
+              <FaShop size={35} />
             </div>
           </div>
 
@@ -29,30 +29,30 @@ const about = () => {
             <p className='text-lg'>Sallers active our site</p>
           </div>
 
-          <div className='text-center flex flex-col items-center border-2 p-2'>
+          <div className='text-center flex flex-col items-center border-2 p-2 hover:bg-[#bd4444] hover:text-white'>
           <div className='w-[80px] h-[80px] bg-[rgba(47,46,48,0.3)] flex items-center justify-center rounded-full'>
-          <div className='bg-black rounded-full p-2 flex items-center justify-center w-[58px] h-[58px] mx-auto'>
-              <FaDollarSign size={35} color='white' />
+          <div className='bg-black text-white hover:bg-white hover:text-black rounded-full p-2 flex items-center justify-center w-[58px] h-[58px] mx-auto'>
+              <FaDollarSign size={35} />
             </div>
             </div> 
             <h3 className='font-bold mt-4 text-2xl'>33k</h3>
             <p className='text-lg'>Mopnthly Produduct Sale</p>
           </div>
 
-          <div className='text-center flex flex-col items-center border-2 p-2'>
+          <div className='text-center flex flex-col items-center border-2 p-2 hover:bg-[#bd4444] hover:text-white'>
            <div className='w-[80px] h-[80px] bg-[rgba(47,46,48,0.3)] flex items-center justify-center rounded-full'>
-           <div className='bg-black rounded-full p-2 flex items-center justify-center w-[58px] h-[58px] mx-auto'>
-              <FaBagShopping size={35} color='white' />
+           <div className='bg-black text-white hover:bg-white hover:text-black rounded-full p-2 flex items-center justify-center w-[58px] h-[58px] mx-auto'>
+              <FaBagShopping size={35} />
             </div>
             </div> 
             <h3 className='font-bold mt-4 text-2xl'>45.5k </h3>
             <p className='text-lg'>Customer active in our sites</p>
           </div>
 
-          <div className='text-center flex flex-col items-center border-2 p-2'>
+          <div className='text-center flex flex-col items-center border-2 p-2 hover:bg-[#bd4444] hover:text-white'>
            <div className='w-[80px] h-[80px] bg-[rgba(47,46,48,0.3)] flex items-center justify-center rounded-full'>
-           <div className='bg-black rounded-full p-2 flex items-center justify-center w-[58px] h-[58px] mx-auto'>
-              <FaShopware size={35} color='white' />
+           <div className='bg-black text-white hover:bg-white hover:text-black rounded-full p-2 flex items-center justify-center w-[58px] h-[58px] mx-auto'>
+              <FaShopware size={35} />
             </div>
             </div> 
             <h3 className='font-bold mt-4 text-2xl'>25k</h3>
