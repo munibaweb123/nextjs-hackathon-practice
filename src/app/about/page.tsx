@@ -60,7 +60,7 @@ const about = () => {
           </div>
         </div>
 
-        <div className='block md:flex justify-between items-center h-[564px]'>
+        <div className='block md:flex justify-between items-center md:h-[564px] h-auto'>
           <div>
           <div className='w-[370px] h-[430px] bg-[#f5f5f5]'>
             <Image src={"/about/about1.png"} alt='about person' width={1000} height={1000}  className="w-full h-full object-fill"/>
