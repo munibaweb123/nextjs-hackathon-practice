@@ -69,6 +69,7 @@ const Month = () => {
                      alt={item.alt}
                      className="w-full h-48 object-cover rounded-t-lg"
                    />
+                   
                    <div className="p-4">
                      <h2 className="text-lg md:text-xl font-semibold mb-2">{item.heading}</h2>
                      <p className="text-xl md:text-2xl font-bold text-gray-900">{item.price} <span className='font-normal opacity-50 line-through'>{item.cutprice}</span></p>

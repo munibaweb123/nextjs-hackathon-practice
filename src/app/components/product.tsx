@@ -100,13 +100,15 @@ const Product = () => {
           <FaRegHeart size={50} className='bg-white p-2 rounded-full'/>
           <FaEye size={50} className='bg-white p-2 rounded-full'/>
         </div>
-        <div className="flex flex-col">
+        <div className="group w-full h-[350px] flex flex-col items-center justify-center relative">
           <img
             src={item.image}
             alt={item.alt}
             className="w-full h-48 object-cover rounded-t-lg"
           />
-         
+         <button className="w-full h-[41px] bg-black text-white hover:bg-[#db4444] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+    Add to Cart
+  </button>
           <div className="p-4">
             <h2 className="text-xl font-semibold mb-2">{item.heading}</h2>
             <p className="text-2xl font-bold text-gray-900">{item.price} <span className='font-normal opacity-50 line-through'>{item.cutprice}</span></p>

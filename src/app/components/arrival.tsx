@@ -65,27 +65,34 @@ const Arrival = () => {
           </div>
         </div>
 
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pt-10'>
-          <div className='text-center flex flex-col items-center'>
-            <div className='bg-black rounded-full p-2 flex items-center justify-center w-[40px] h-[40px] mx-auto'>
-              <FaTruck size={20} color='white' />
+      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pt-10'>
+        <div className='text-center flex flex-col items-center '>
+          <div className='w-[80px] h-[80px] bg-[rgba(47,46,48,0.3)] flex items-center justify-center rounded-full'>
+            <div className='bg-black rounded-full p-2 flex items-center justify-center w-[58px] h-[58px] mx-auto'>
+              <FaTruck size={35} color='white' />
             </div>
+          </div>
+
             <h3 className='font-bold mt-4'>FREE AND FAST DELIVERY</h3>
             <p className='text-sm'>Free delivery for all orders over $140</p>
           </div>
 
           <div className='text-center flex flex-col items-center'>
-            <div className='bg-black rounded-full p-2 flex items-center justify-center w-[40px] h-[40px] mx-auto'>
-              <FaHeadset size={20} color='white' />
+          <div className='w-[80px] h-[80px] bg-[rgba(47,46,48,0.3)] flex items-center justify-center rounded-full'>
+          <div className='bg-black rounded-full p-2 flex items-center justify-center w-[58px] h-[58px] mx-auto'>
+              <FaHeadset size={35} color='white' />
             </div>
+            </div> 
             <h3 className='font-bold mt-4'>24/7 CUSTOMER SERVICE</h3>
             <p className='text-sm'>Friendly 24/7 customer support</p>
           </div>
 
           <div className='text-center flex flex-col items-center'>
-            <div className='bg-black rounded-full p-2 flex items-center justify-center w-[40px] h-[40px] mx-auto'>
-              <FaShieldAlt size={20} color='white' />
+           <div className='w-[80px] h-[80px] bg-[rgba(47,46,48,0.3)] flex items-center justify-center rounded-full'>
+           <div className='bg-black rounded-full p-2 flex items-center justify-center w-[58px] h-[58px] mx-auto'>
+              <FaShieldAlt size={35} color='white' />
             </div>
+            </div> 
             <h3 className='font-bold mt-4'>MONEY BACK GUARANTEE</h3>
             <p className='text-sm'>We return money within 30 days</p>
           </div>
