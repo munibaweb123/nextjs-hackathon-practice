@@ -103,6 +103,8 @@ const Sales = () => {
         src={item.image}
         alt={item.alt}
         className="w-[270px] h-48 object-cover rounded-t-lg"
+        width={500}
+        height={500}
       />
         <button className="w-full h-[41px] bg-black text-white hover:bg-[#db4444] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
     Add to Cart

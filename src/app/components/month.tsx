@@ -68,6 +68,8 @@ const Month = () => {
                      src={item.image}
                      alt={item.alt}
                      className="w-full h-48 object-cover rounded-t-lg"
+                     width={500}
+                     height={500}
                    />
                    
                    <div className="p-4">

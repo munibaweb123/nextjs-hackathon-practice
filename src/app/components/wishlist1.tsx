@@ -1,114 +1,66 @@
 import Image from 'next/image'
 import React from 'react'
-import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai'
 import { FaEye, FaRegHeart } from 'react-icons/fa'
 
-const Product = () => {
+const Wishlist1 = () => {
   return (
-    <div className='max-w-[1170px] mx-auto'>
-        <div className='flex gap-x-4 items-center text-[#db4444] font-bold py-4'>
-    <div className='bg-[#db4444] w-[20px] h-[40px] rounded-md'></div>
-
-    <h2>Our Products</h2>
-    </div>
-    <div className='flex items-center justify-between'>
-        
-        <div className='flex items-center gap-x-4 font-bold'>
-        <h2 className='text-4xl font-bold flex items-center justify-start pr-10'>Explore Our Products</h2>
-            
-        </div>
-        <div className='text-black flex items-center gap-x-2'>
-            <AiOutlineArrowLeft size={50} className='rounded-full p-2 bg-[#f5f5f5]'/>
-            <AiOutlineArrowRight size={50} className='rounded-full p-2 bg-[#f5f5f5]'/>
-        </div>
-       </div>
-
-       {/* products */}
-       <div className="w-full relative py-4">
-  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-5">
+    <div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-5">
     {[
       {
-        image: "/product/caser.png",
+        image: "/cart/cart1.png",
         alt: "Product 1",
-        heading: "HAVIT HV-G92 Gamepad", 
+        heading: "Quilted Satin Jacket", 
         rating: 5,
         price: "$99.99",
         cutprice: "$149",
         off:"-40%"
       },
       {
-        image: "/product/camera.png", 
+        image: "/cart/cart2.png",
         alt: "Product 2",
-        heading: "AK-900 Wired Keyboard",
+        heading: "HAVIT HV-G92 Gamepad",
         rating: 5,
         price: "$149.99", 
         cutprice: "$199",
         off:"-50%"
       },
       {
-        image: "/product/laptop.png",
+        image: "/cart/cart3.png",
         alt: "Product 3",
-        heading: "IPS LCD Gaming Monitor",
+        heading: "Gucci duffle bag",
         rating: 5,
         price: "$199.99",
         cutprice: "$249", 
         off:"-35%"
       },
       {
-        image: "/product/curology.png",
+        image: "/cart/cart4.png",
         alt: "Product 4",
-        heading: "Gaming Monitor",
+        heading: "RGB liquid CPU Coolerr",
         rating: 5,
         price: "$199.99",
         off:"-26%"
       },
-      {
-        image: "/product/car.png",
-        alt: "Product 4",
-        heading: "Gaming Monitor",
-        rating: 5,
-        price: "$199.99",
-        off:"-26%"
-      },
-      {
-        image: "/product/shoes.png",
-        alt: "Product 4",
-        heading: "Gaming Monitor",
-        rating: 5,
-        price: "$199.99",
-        off:"-26%"
-      },
-      {
-        image: "/product/gamepad.png",
-        alt: "Product 4",
-        heading: "Gaming Monitor",
-        rating: 5,
-        price: "$199.99",
-        off:"-26%"
-      },
-      {
-        image: "/product/jacket.png",
-        alt: "Product 4",
-        heading: "Gaming Monitor",
-        rating: 5,
-        price: "$199.99",
-        off:"-26%"
-      }
+     
     ].map((item, index) => (
       <div key={index} className="bg-white rounded-lg shadow-md relative">
-        <div className='absolute bg-[#db4444] p-2 m-2 rounded-md'>{item.off}</div>
-        <div className='absolute right-2'>
+
+    <div className='absolute hover:bg-[#db4444] p-2 m-2 rounded-md text-white z-10'>{item.off}</div>
+        <div className='absolute right-2 z-10'>
           <FaRegHeart size={50} className='bg-white p-2 rounded-full'/>
           <FaEye size={50} className='bg-white p-2 rounded-full'/>
         </div>
         <div className="group w-full h-[350px] flex flex-col items-center justify-center relative">
-          <Image
+        <div className='flex justify-center items-center'>
+        <Image
             src={item.image}
             alt={item.alt}
             className="w-full h-48 object-cover rounded-t-lg"
             width={500}
             height={500}
           />
+        </div>
          <button className="w-full h-[41px] bg-black text-white hover:bg-[#db4444] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
     Add to Cart
   </button>
@@ -132,12 +84,8 @@ const Product = () => {
       </div>
     ))}
   </div>
-</div>
-<div className='flex items-center justify-center'>
-    <button className='bg-[#db4444] text-[#fafafa] w-[234px] h-[56px] rounded-md'>View All Products</button>
-</div>
     </div>
   )
 }
 
-export default Product
+export default Wishlist1

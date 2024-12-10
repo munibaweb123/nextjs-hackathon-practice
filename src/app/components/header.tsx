@@ -77,7 +77,8 @@ const Header = () => {
 
         <div className='flex gap-x-4 items-center'>
           <FaSearch className='md:hidden' size={20}/>
-          <FaHeart size={20} />
+          
+          <Link href={"/wishlist"}><FaHeart size={20} /></Link>
           <FaShoppingCart size={20} />
           <div className="relative inline-block" ref={dropdownRef}>
           <button
