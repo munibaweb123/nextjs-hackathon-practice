@@ -26,7 +26,7 @@ const Header = () => {
   useEffect(() => {
     document.addEventListener("mousedown", handleClickOutside); // Listen for outside clicks
     return () => document.removeEventListener("mousedown", handleClickOutside); // Cleanup
-  }, []);
+  }, );
   return (
     <div className='border-b-2'>
       <div className='text-[#fafafa] bg-black flex items-center justify-evenly p-2 text-sm md:text-base'>

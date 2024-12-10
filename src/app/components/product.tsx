@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import React from 'react'
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai'
 import { FaEye, FaRegHeart } from 'react-icons/fa'
@@ -101,7 +102,7 @@ const Product = () => {
           <FaEye size={50} className='bg-white p-2 rounded-full'/>
         </div>
         <div className="group w-full h-[350px] flex flex-col items-center justify-center relative">
-          <img
+          <Image
             src={item.image}
             alt={item.alt}
             className="w-full h-48 object-cover rounded-t-lg"

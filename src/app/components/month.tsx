@@ -64,7 +64,7 @@ const Month = () => {
                    <FaEye size={30} className='bg-white p-2 rounded-full'/>
                  </div>
                  <div className="flex flex-col">
-                   <img
+                   <Image
                      src={item.image}
                      alt={item.alt}
                      className="w-full h-48 object-cover rounded-t-lg"

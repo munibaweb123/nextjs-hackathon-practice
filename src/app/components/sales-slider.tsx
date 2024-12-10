@@ -2,6 +2,7 @@ import React from 'react'
 import { FaRegHeart,FaEye } from "react-icons/fa";
 
 import { AiOutlineArrowLeft,AiOutlineArrowRight } from 'react-icons/ai';
+import Image from 'next/image';
 
 const Sales = () => {
   return (
@@ -98,7 +99,7 @@ const Sales = () => {
     <FaEye size={50} className='bg-white p-2 rounded-full'/>
     </div>
     <div className=" group w-full h-[350px] flex flex-col items-center justify-center relative">
-      <img
+      <Image
         src={item.image}
         alt={item.alt}
         className="w-[270px] h-48 object-cover rounded-t-lg"
