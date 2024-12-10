@@ -79,7 +79,7 @@ const Header = () => {
           <FaSearch className='md:hidden' size={20}/>
           
           <Link href={"/wishlist"}><FaHeart size={20} /></Link>
-          <FaShoppingCart size={20} />
+          <Link href={"/cart"}><FaShoppingCart size={20} /></Link>
           <div className="relative inline-block" ref={dropdownRef}>
           <button
         onClick={toggleDropdown}
