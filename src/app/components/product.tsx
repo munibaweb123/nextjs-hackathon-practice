@@ -60,55 +60,62 @@ const Product = () => {
         heading: "Gaming Monitor",
         rating: 5,
         price: "$199.99",
+        cutprice: "$249", 
         off:"-26%"
       },
       {
         image: "/product/car.png",
         alt: "Product 4",
-        heading: "Gaming Monitor",
+        heading: "car",
         rating: 5,
         price: "$199.99",
+        cutprice: "$249", 
         off:"-26%"
       },
       {
         image: "/product/shoes.png",
         alt: "Product 4",
-        heading: "Gaming Monitor",
+        heading: "shoes",
         rating: 5,
         price: "$199.99",
+        cutprice: "$249", 
         off:"-26%"
       },
       {
         image: "/product/gamepad.png",
         alt: "Product 4",
-        heading: "Gaming Monitor",
+        heading: "Game pad",
         rating: 5,
         price: "$199.99",
+        cutprice: "$249", 
         off:"-26%"
       },
       {
         image: "/product/jacket.png",
         alt: "Product 4",
-        heading: "Gaming Monitor",
+        heading: "jacket",
         rating: 5,
         price: "$199.99",
+        cutprice: "$249", 
         off:"-26%"
       }
     ].map((item, index) => (
       <div key={index} className="bg-white rounded-lg shadow-md relative">
-        <div className='absolute bg-[#db4444] p-2 m-2 rounded-md'>{item.off}</div>
-        <div className='absolute right-2'>
+        <div className='absolute bg-[#db4444] p-2 m-2 rounded-md z-10'>{item.off}</div>
+        <div className='absolute right-2 z-10'>
           <FaRegHeart size={50} className='bg-white p-2 rounded-full'/>
           <FaEye size={50} className='bg-white p-2 rounded-full'/>
         </div>
-        <div className="group w-full h-[350px] flex flex-col items-center justify-center relative">
-          <Image
+        <div className="group w-full h-[350px] flex flex-col items-center justify-center relative ">
+         <div className='flex items-center justify-center bg-slate-100 h-full'>
+         <Image
             src={item.image}
             alt={item.alt}
-            className="w-full h-48 object-cover rounded-t-lg"
+            className="h-52 w-full object-center"
             width={500}
             height={500}
           />
+         </div>
          <button className="w-full h-[41px] bg-black text-white hover:bg-[#db4444] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
     Add to Cart
   </button>

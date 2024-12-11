@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link';
 import React from 'react'
 import { FaQrcode } from 'react-icons/fa';
 
@@ -23,17 +24,17 @@ const footer = () => {
         </ul>
         <ul className='space-y-4'>
           <li className='text-xl md:text-2xl'>Account</li>
-          <li className='text-lg md:text-xl'>My Account</li>
-          <li className='text-lg md:text-xl'>Login / Register</li>
-          <li className='text-lg md:text-xl'>Cart</li>
-          <li className='text-lg md:text-xl'>Wishlist</li>
+          <li className='text-lg md:text-xl'><Link href={"/account"}>My Account</Link></li>
+          <li className='text-lg md:text-xl'><Link href={"/signup"}>Login / Register</Link></li>
+          <li className='text-lg md:text-xl'><Link href={"/cart"}>Cart</Link></li>
+          <li className='text-lg md:text-xl'><Link href={"/wishlist"}>Wishlist</Link></li>
         </ul>
         <ul className='space-y-4'>
           <li className='text-xl md:text-2xl'>Quick Link</li>
           <li className='text-lg md:text-xl'>Privacy Policy</li>
           <li className='text-lg md:text-xl'>Terms Of Use</li>
           <li className='text-lg md:text-xl'>FAQ</li>
-          <li className='text-lg md:text-xl'>Contact</li>
+          <li className='text-lg md:text-xl'><Link href={"/contact"}>Contact</Link></li>
         </ul>
         <ul className='w-full md:w-auto'>
           <li className='text-xl md:text-2xl mb-4'>Download App</li>

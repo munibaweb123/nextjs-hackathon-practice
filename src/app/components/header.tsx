@@ -94,7 +94,7 @@ const Header = () => {
           <ul className="py-2 text-sm text-gray-700">
             <li>
               <button className="block w-full text-left px-4 py-2 hover:bg-gray-100">
-                Manage My Profile
+                <Link href={"/error"}>Manage My Profile</Link>
               </button>
             </li>
             <li>
@@ -104,17 +104,17 @@ const Header = () => {
             </li>
             <li>
               <button className="block w-full text-left px-4 py-2 hover:bg-gray-100">
-                My Orders
+               <Link href={"/error"}> My Orders</Link>
               </button>
             </li>
             <li>
               <button className="block w-full text-left px-4 py-2 hover:bg-gray-100">
-                My Cancellations
+               <Link href={"/error"}> My Cancellations</Link>
               </button>
             </li>
             <li>
               <button className="block w-full text-left px-4 py-2 hover:bg-gray-100">
-                My Reviews
+                <Link href={"/error"}>My Reviews</Link>
               </button>
             </li>
             <li>
