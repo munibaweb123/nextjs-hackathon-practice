@@ -5,8 +5,8 @@ import { FaCcMastercard, FaCcVisa, FaCheckSquare, FaPaypal } from 'react-icons/f
 const checkOut = () => {
   return (
     <div className='max-w-[1280px] mx-auto'>
-          <h2 className='my-10'>Account / My Account / Product / View Cart
-        <span className='font-semibold'>CCheckOut</span>
+          <h2 className='my-10'>Account / My Account / Product / View Cart /
+        <span className='font-semibold'> CheckOut</span>
       </h2>
 
       <h3 className='text-4xl font-bold'>Billing Details</h3>
