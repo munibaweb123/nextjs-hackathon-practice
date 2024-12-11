@@ -12,7 +12,7 @@ const account = () => {
         </h2>
       </div>
 
-      <div className='flexflex-col md:flex-row gap-x-2 items-center p-4'>
+      <div className='flex flex-col md:flex-row gap-x-2 items-center p-4'>
         <div className='space-y-4'>
             <h3 className='font-bold'>Manage My Account</h3>
             <ul className='pl-4'>
