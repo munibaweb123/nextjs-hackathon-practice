@@ -10,35 +10,35 @@ const checkOut = () => {
       </h2>
 
       <h3 className='text-4xl font-bold'>Billing Details</h3>
-      <div className='grid grid-cols-1 md:grid-cols-2 py-10'>
+      <div className='grid grid-cols-1 md:grid-cols-2 py-10 gap-4'>
         <div className='space-y-2'>
            <div>
            <label>First Name*</label>
-           <input type="text" className='w-full p-2' />
+           <input type="text" className='w-full p-2 bg-slate-200' />
            </div>
            <div>
            <label>Company Name</label>
-           <input type="text" className='w-full p-2' />
+           <input type="text" className='w-full p-2 bg-slate-100' />
            </div>
            <div>
            <label>Street Address*</label>
-           <input type="text" className='w-full p-2' />
+           <input type="text" className='w-full p-2 bg-slate-200' />
            </div>
            <div>
            <label>Apartment, floor, etc. (optional)</label>
-           <input type="text" className='w-full p-2' />
+           <input type="text" className='w-full p-2 bg-slate-100' />
            </div>
            <div>
            <label>Town/City*</label>
-           <input type="text" className='w-full p-2' />
+           <input type="text" className='w-full p-2 bg-slate-200' />
            </div>
            <div>
            <label>Phone Number*</label>
-           <input type="text" className='w-full p-2' />
+           <input type="text" className='w-full p-2 bg-slate-100' />
            </div>
            <div>
            <label>Email Address*</label>
-           <input type="text" className='w-full p-2' />
+           <input type="text" className='w-full p-2 bg-slate-200' />
            </div>
            <div className='flex items-center gap-x-2'>
             <FaCheckSquare size={20} color='#db4444'/>
@@ -98,7 +98,7 @@ const checkOut = () => {
                       
                   </div>
 
-          <div className='flex flex-col sm:flex-row items-center gap-4'>
+          <div className='flex flex-col sm:flex-row items-center justify-between w-full'>
           <input type="text" placeholder='Coupon Code' className='p-2 border-2 w-full sm:w-auto'/>
           <button className='border-2 w-full sm:w-[159px] h-[56px] rounded-md hover:bg-[#db4444] hover:text-white'>Apply Coupon</button>
         </div>
