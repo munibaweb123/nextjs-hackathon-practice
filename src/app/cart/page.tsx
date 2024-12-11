@@ -1,5 +1,6 @@
 "use client"
 import Image from 'next/image'
+import Link from 'next/link';
 import React, { useState } from 'react'
 import { AiOutlineDown, AiOutlineUp } from 'react-icons/ai';
 
@@ -112,7 +113,7 @@ const Cart = () => {
             <p>${subtotal}.00</p>
           </div>
           <div className='flex items-center justify-center mt-4'>
-            <button className='border-2 w-full sm:w-[159px] h-[56px] rounded-md hover:bg-[#db4444] hover:text-white'>Proceed to checkout</button>
+            <button className='border-2 w-full sm:w-[159px] h-[56px] rounded-md hover:bg-[#db4444] hover:text-white'><Link href={"/checkout"}>Proceed to checkout</Link></button>
           </div>
         </div>
       </div>
