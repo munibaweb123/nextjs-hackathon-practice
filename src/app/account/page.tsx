@@ -50,7 +50,7 @@ const account = () => {
             </div>
           </div>
           <div className='space-y-4 flex-col'>
-                <label>Address</label>
+                <label>Password Changes</label>
                 <input type="text" className='bg-slate-200 p-2 w-full' placeholder='Password Changes'/>
                 <input type="text" className='bg-slate-200 p-2 w-full' placeholder='New Passwod'/>
                 <input type="text" className='bg-slate-200 p-2 w-full' placeholder='Confirm New Passwod'/>
