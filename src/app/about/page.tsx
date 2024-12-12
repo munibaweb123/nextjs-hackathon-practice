@@ -12,7 +12,7 @@ const about = () => {
       <p>Launced in 2015, Exclusive is South Asia’s premier online shopping makterplace with an active presense in Bangladesh. Supported by wide range of tailored marketing, data and service solutions, Exclusive has 10,500 sallers and 300 brands and serves 3 millioons customers across the region. </p>
       <p> Exclusive has more than 1 Million products to offer, growing at a very fast. Exclusive offers a diverse assotment in categories ranging  from consumer.</p>
     </div>
-    <div className='flex items-center justify-center w-[705px] h-[609px]'>
+    <div className='flex items-center justify-center w-screen md:w-[705px] md:h-[609px]'>
       <Image src={"/about/potrait.png"} alt='potrait' height={1000} width={1000}/>
     </div>
     </div>
@@ -60,9 +60,9 @@ const about = () => {
           </div>
         </div>
 
-        <div className='block md:flex md:w-[1170px] justify-between items-center md:h-[564px] h-auto'>
+        <div className='flex flex-col sm:flex-row md:w-[1170px] justify-between items-center md:h-[564px] h-auto'>
           <div>
-          <div className='w-[370px] h-[430px] bg-[#f5f5f5]'>
+          <div className='md:w-[370px] h-[430px] bg-[#f5f5f5]'>
             <Image src={"/about/about1.png"} alt='about person' width={1000} height={1000}  className="w-full h-full object-fill"/>
           </div>
           <h3 className='font-bold mt-4 text-2xl'>Tom Cruise</h3>
@@ -70,7 +70,7 @@ const about = () => {
           <div className='flex gap-x-2 items-center'><FaTwitter size={20}/> <FaInstagram size={20}/> <FaLinkedin size={20}/></div>
           </div>
           <div className='flex flex-col'>
-          <div className='w-[370px] h-[430px] bg-[#f5f5f5]'>
+          <div className='md:w-[370px] h-[430px] bg-[#f5f5f5]'>
             <Image src={"/about/about3.png"} alt='about person' width={1000} height={1000} className="w-full h-full object-fill"/>
           </div>
           <h3 className='font-bold mt-4 text-2xl'>Emma Watson</h3>
@@ -78,7 +78,7 @@ const about = () => {
           <div className='flex gap-x-2 items-center'><FaTwitter size={20}/> <FaInstagram size={20}/> <FaLinkedin size={20}/></div>
           </div>
           <div className='flex flex-col'>
-          <div className='w-[370px] h-[430px] bg-[#f5f5f5]'>
+          <div className='md:w-[370px] h-[430px] bg-[#f5f5f5]'>
             <Image src={"/about/about2.png"} alt='about person' width={1000} height={1000} className="w-full h-full object-fill"/>
           </div>
           <h3 className='font-bold mt-4 text-2xl'>Will Smith</h3>

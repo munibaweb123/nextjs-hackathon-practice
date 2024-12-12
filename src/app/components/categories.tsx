@@ -3,6 +3,7 @@ import { FaCamera,FaHeadphones,FaGamepad } from "react-icons/fa";
 import { MdWatch} from "react-icons/md";
 import { FiMonitor,FiSmartphone  } from "react-icons/fi"; 
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai'
+import Link from 'next/link';
 
 const Categories = () => {
   return (
@@ -60,7 +61,7 @@ const Categories = () => {
 
         <div className='border-2 p-2 hover:shadow-lg hover:bg-[#db4444] hover:text-white transition duration-300'>
           <div className='flex items-center justify-center'>
-            <FaGamepad className="w-16 h-16 md:w-24 md:h-24 lg:w-32 lg:h-32"/>
+            <button><Link href={"/product"}><FaGamepad className="w-16 h-16 md:w-24 md:h-24 lg:w-32 lg:h-32"/></Link></button>
           </div>
           <p className="text-center mt-2">Gaming</p>
         </div>
