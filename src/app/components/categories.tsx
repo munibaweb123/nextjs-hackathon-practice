@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaCamera,FaHeadphones,FaGamepad } from "react-icons/fa"; 
+import { FaCamera,FaHeadphones,FaGamepad, FaPlaystation } from "react-icons/fa"; 
 import { MdWatch} from "react-icons/md";
 import { FiMonitor,FiSmartphone  } from "react-icons/fi"; 
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai'
@@ -65,6 +65,8 @@ const Categories = () => {
           </div>
           <p className="text-center mt-2">Gaming</p>
         </div>
+
+     
       </div>
     </div>
   )
