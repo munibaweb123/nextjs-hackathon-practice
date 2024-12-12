@@ -51,44 +51,7 @@ const products1: Product[] = [
     cutprice:"40"
   }
 ];
-const products2: Product[] = [
-  {
-    image: "/cart/cart1.png",
-    alt: "Product 5",
-    heading: "Quilted Satin Jacket",
-    rating: 5,
-    price: "$750",
-    off: "-26%",
-    cutprice:"1000"
-  },
-  {
-    image: "/cart/cart2.png",
-    alt: "Product 6",
-    heading: "GP11 Shooter USB Gamepad",
-    rating: 5,
-    price: "$550",
-    off: "-26%",
-    cutprice:"700"
-  },
-  {
-    image: "/cart/cart3.png",
-    alt: "Product 7",
-    heading: "Gucci duffle bag",
-    rating: 5,
-    price: "$960",
-    off: "-26%",
-    cutprice:"$1160"
-  },
-  {
-    image: "/cart/cart4.png",
-    alt: "Product 8",
-    heading: "RGB liquid CPU Cooler",
-    rating: 5,
-    price: "$$1960",
-    off: "-26%",
-    cutprice:"2200"
-  }
-];
+
 const productDetail = () => {
   return (
     <div className='max-w-[1280px] mx-auto'>
