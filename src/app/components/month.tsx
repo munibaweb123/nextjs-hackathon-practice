@@ -121,12 +121,12 @@ const Month = () => {
            </div>
            <div className='relative w-full md:w-1/2 h-[300px] md:h-[500px] mt-8 md:mt-0'>
              <div className='absolute rounded-full bg-[#d9d9d9] blur-2xl backdrop-filter backdrop-blur-lg bg-opacity-30 bg-gradient-radial from-[#d9d9d9]/70 via-[#d9d9d9]/40 to-[#d9d9d9]/10 w-full h-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'></div>
-             <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full'>
+             <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full flex items-center justify-center'>
                <Image 
                  src="/product/product1.png" 
                  alt='boom box' 
-                 layout="fill"
-                 objectFit="contain"
+                 width={500}
+                 height={500}
                />
              </div>
            </div>
