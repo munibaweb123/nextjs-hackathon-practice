@@ -118,7 +118,7 @@ const Product = () => {
 
         <CarouselContent className="-ml-2 md:-ml-4">
           {products.map((item, index) => (
-            <CarouselItem key={index} className="pl-2 md:pl-4 basis-1/3">
+            <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/3">
               <div className="w-full relative py-4">
                 <div className="bg-white rounded-lg shadow-md relative">
                   <div className="absolute bg-[#db4444] p-2 m-2 rounded-md z-10">{item.off}</div>

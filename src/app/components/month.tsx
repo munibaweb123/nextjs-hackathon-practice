@@ -1,8 +1,8 @@
 import Image from 'next/image';
 import React from 'react';
 import { FaEye, FaRegHeart } from 'react-icons/fa';
-import { Carousel, CarouselContent, CarouselItem } from '@/app/components/ui/carousel';
-import { Card} from '@/app/components/ui/card';
+import { Carousel, CarouselContent, CarouselItem } from '../components/ui/carousel';
+import { Card} from "../components/ui/card";
 
 const Month = () => {
   const products = [
@@ -67,7 +67,7 @@ const Month = () => {
       <Carousel>
         <CarouselContent>
           {products.map((item, index) => (
-            <CarouselItem key={index} className="basis-1/3">
+            <CarouselItem key={index} className="md:basis-1/3">
               <Card className="bg-white rounded-lg shadow-md relative">
                 <div className="absolute bg-[#db4444] p-2 m-2 rounded-md">{item.off}</div>
                 <div className="absolute right-2">
