@@ -96,27 +96,43 @@ const Product = () => {
         <h2>Our Products</h2>
       </div>
 
-      <div className="flex items-center justify-between">
-        <div className="flex items-center gap-x-4 font-bold">
-          <h2 className="text-4xl font-bold flex items-center justify-start pr-10">Explore Our Products</h2>
-        </div>
-      </div>
+    
 
       {/* Carousel */}
       <Carousel>
-        <div className="relative">
+     
+        
           {/* Arrow Buttons Grouped on the Right */}
-          <div className="absolute right-4 top-1/2 transform -translate-y-1/2 flex flex-col gap-2 z-10">
-            <CarouselPrevious >
-              <AiOutlineArrowLeft size={100} className="rounded-full p-2 bg-[#f5f5f5] shadow-md" />
-            </CarouselPrevious>
-            <CarouselNext>
-              <AiOutlineArrowRight size={100} className="rounded-full p-2 bg-[#f5f5f5] shadow-md" />
-            </CarouselNext>
-          </div>
-        </div>
+         {/* Arrow Buttons Grouped Responsively */}
+{/* Arrow Buttons Grouped Responsively */}
+<div className="flex flex-col md:flex-row items-center justify-between relative gap-y-4">
+  {/* Heading */}
+  <h2 className="text-4xl font-bold flex items-center justify-start pr-10 mb-4 md:mb-0">
+    Explore Our Products
+  </h2>
 
-        <CarouselContent className="-ml-2 md:-ml-4">
+  {/* Responsive Arrow Buttons */}
+  <div className="flex md:right-0 bottom-0 absolute flex-col md:flex-row items-center gap-4 mt-8 md:mt-0">
+    <CarouselPrevious>
+      <AiOutlineArrowLeft
+        size={50} // Adjust size for smaller screens
+        className="rounded-full p-2 bg-[#f5f5f5] shadow-md"
+      />
+    </CarouselPrevious>
+    <CarouselNext>
+      <AiOutlineArrowRight
+        size={50} // Adjust size for smaller screens
+        className="rounded-full p-2 bg-[#f5f5f5] shadow-md"
+      />
+    </CarouselNext>
+  </div>
+</div>
+
+
+         
+        
+
+        <CarouselContent className="-ml-2 md:-ml-4 mt-10">
           {products.map((item, index) => (
             <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/3">
               <div className="w-full relative py-4">
