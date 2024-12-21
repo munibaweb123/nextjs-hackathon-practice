@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import React from 'react';
+
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai';
 import { FaEye, FaRegHeart } from 'react-icons/fa';
 
