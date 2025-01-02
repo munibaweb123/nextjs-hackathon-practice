@@ -4,7 +4,7 @@ import { FaRegHeart, FaEye } from "react-icons/fa";
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
 import Image from "next/image";
 
-const salesEndDate = new Date(2025, 0, 1, 0, 0, 0); // Year 2025, January 1st, 00:00:00
+const salesEndDate = new Date(2025, 0, 3, 0, 0, 0); // Year 2025, January 3rd, 00:00:00
 const calculateTimeLeft = () => salesEndDate.getTime() - new Date().getTime();
 
 const Sales = () => {
