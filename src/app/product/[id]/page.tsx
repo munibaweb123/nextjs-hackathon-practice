@@ -18,7 +18,8 @@ interface ProductDetails {
   size: string[];
 }
 
-const ProductDetail = async ({ params }: { params: { id: string } }) => {
+const ProductDetail = async ({ params }: { params: Promise<{id: string}>}) => {
+  const { id } = await params;
   const query = `*[_type == 'product' && id == $id][0]{
     image, 
     image1, 
@@ -32,7 +33,7 @@ const ProductDetail = async ({ params }: { params: { id: string } }) => {
     size
   }`;
 
-  const product: ProductDetails | null = await client.fetch(query, { id: params.id });
+  const product: ProductDetails | null = await client.fetch(query, { id});
   console.log(product)
 
   if (!product) {
