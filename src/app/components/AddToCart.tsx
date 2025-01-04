@@ -2,6 +2,7 @@
 import { useShoppingCart } from "use-shopping-cart";
 import { Button } from "./ui/button";
 import { urlFor } from "@/sanity/lib/image";
+import Link from "next/link";
 
 
 export interface ProductCart{
@@ -23,6 +24,6 @@ export default function AddToCart({name,description,price,currency,image}:Produc
         id:""
     }
     return(
-        <Button onClick={()=>{addItem(Product);handleCartClick()}}>Add to Cart</Button>
+        <Button onClick={()=>{addItem(Product);handleCartClick()}}><Link href={"/cart"}>Add to Cart</Link></Button>
     )
 }
