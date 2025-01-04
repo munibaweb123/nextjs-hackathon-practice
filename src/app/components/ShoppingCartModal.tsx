@@ -21,10 +21,7 @@ export default function ShoppingCartModal() {
       open={shouldDisplayCart} 
       onOpenChange={() => handleCartClick()} // Ensure it updates state
     >
-      {/* Trigger Button to Open Modal */}
-      <SheetTrigger asChild>
-        <Button variant="outline">Open</Button>
-      </SheetTrigger>
+    
       
       {/* Modal Content */}
       <SheetContent className="bg-white">
