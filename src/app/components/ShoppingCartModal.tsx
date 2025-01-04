@@ -76,9 +76,10 @@ export default function ShoppingCartModal() {
             </div>
               <p className="mt-0.5 text-sm text-gray-500">Sipping and taxes are calculated at checkout.</p>
              <div>
-             <Button className="w-full bg-[#db4444]">
-                <Link href={"/checkout"}>Checkout</Link>
+             <Button className="w-full bg-[#db4444]" onClick={() => window.location.href = '/checkout'}>
+                Checkout
               </Button>
+
              </div>
              <div className="flex justify-center gap-x-4">
                 <p>Or </p>
