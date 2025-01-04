@@ -3,8 +3,11 @@ import Link from 'next/link'
 import React, { useEffect, useRef, useState } from 'react'
 import { FaSearch, FaHeart, FaShoppingCart, FaBars, FaTimes } from 'react-icons/fa'
 import { MdPerson } from "react-icons/md";
+import { useShoppingCart } from 'use-shopping-cart';
+import { Button } from './ui/button';
 
 const Header = () => {
+  const {handleCartClick}=useShoppingCart();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDropdownVisible, setIsDropdownVisible] = useState(false);
   const dropdownRef = useRef<HTMLDivElement | null>(null);// Create a reference for the dropdown container
@@ -79,7 +82,8 @@ const Header = () => {
           <FaSearch className='md:hidden' size={20}/>
           
           <Link href={"/wishlist"}><FaHeart size={20} /></Link>
-          <Link href={"/cart"}><FaShoppingCart size={20} /></Link>
+       
+          <Button onClick={()=>handleCartClick()}><FaShoppingCart size={20} /></Button>
           <div className="relative inline-block" ref={dropdownRef}>
           <button
         onClick={toggleDropdown}

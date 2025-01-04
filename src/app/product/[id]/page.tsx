@@ -5,6 +5,7 @@ import React from 'react';
 import { FaHeart, FaRedo, FaShippingFast, FaStar } from 'react-icons/fa';
 import Wishlist from '../../components/wishlist';
 
+
 interface Product {
   image: string;
   alt: string;
@@ -70,6 +71,7 @@ interface ProductDetails {
 
 const ProductDetail = async ({ params }: { params: Promise<{id: string}>}) => {
   const { id } = await params;
+ 
   const query = `*[_type == 'product' && id == $id][0]{
     image, 
     image1, 

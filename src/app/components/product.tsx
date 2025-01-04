@@ -1,5 +1,7 @@
+'use client'
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import Link from "next/link"; // Import the Link component for routing
+import Link from "next/link";
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
 import { FaEye, FaRegHeart } from "react-icons/fa";
 import {
@@ -9,33 +11,60 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "../components/ui/carousel";
+
 import { client } from "@/sanity/lib/client";
-import { urlFor } from "@/sanity/lib/image";
+import AddToCart from "./AddToCart";
 
 interface Product {
   id: string;
-  image: { asset: { url: string } };
+  image: string;
   alt: string;
   heading: string;
   rating: number;
-  price: string;
+  price: number;
   cutprice?: string;
   off: string;
+  description: string;
 }
 
-const Product = async () => {
-  // Fetch products from Sanity
-  const query = `*[_type == "product"] {
-    id,
-    "image": image.asset->url,
-    alt,
-    "heading": heading,
-    rating,
-    "price": price,
-    "cutprice": cutprice,
-    off
-  }`;
-  const products: Product[] = await client.fetch(query);
+const Product = () => {
+  const [products, setProducts] = useState<Product[]>([]);
+
+  const [isClient, setIsClient] = useState(false);
+
+  // Ensure the component is only rendered on the client side
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  // Fetch data from Sanity
+  useEffect(() => {
+    const fetchProducts = async () => {
+      const query = `*[_type == "product"]{
+        id,
+        "image": image.asset->url,
+        alt,
+        heading,
+        rating,
+        price,
+        cutprice,
+        off,
+        description
+      }`;
+      const fetchedProducts = await client.fetch(query);
+      setProducts(fetchedProducts);
+    };
+
+    fetchProducts();
+  }, []);
+
+  // Handle Add to Cart
+ 
+
+  // Prevent rendering on the server
+  if (!isClient) {
+    return null;
+  }
 
   return (
     <div className="max-w-[1170px] mx-auto">
@@ -47,14 +76,10 @@ const Product = async () => {
 
       {/* Carousel */}
       <Carousel>
-        {/* Arrow Buttons Grouped Responsively */}
         <div className="flex flex-col md:flex-row items-center justify-between relative gap-y-4">
-          {/* Heading */}
           <h2 className="text-4xl font-bold flex items-center justify-start pr-10 mb-4 md:mb-0">
             Explore Our Products
           </h2>
-
-          {/* Responsive Arrow Buttons */}
           <div className="flex md:right-0 bottom-0 absolute flex-col md:flex-row items-center gap-4 mt-8 md:mt-0">
             <CarouselPrevious>
               <AiOutlineArrowLeft
@@ -85,26 +110,28 @@ const Product = async () => {
                   </div>
                   <div className="group w-full h-[350px] flex flex-col items-center justify-center relative">
                     <div className="flex items-center justify-center bg-slate-100 h-full">
-                      {/* Link to product detail page */}
                       <Link href={`/product/${item.id}`}>
-                        
-                          <Image
-                            src={item.image ? urlFor(item.image).url() : '/product/product1.png'}
-                            alt={item.alt || "Product Image"}
-                            className="h-52 w-full object-center"
-                            width={500}
-                            height={500}
-                          />
-                        
+                        <Image
+                          src={item.image || "/product/product1.png"}
+                          alt={item.alt || "Product Image"}
+                          className="h-52 w-full object-center"
+                          width={500}
+                          height={500}
+                        />
                       </Link>
                     </div>
-                    <button className="w-full h-[41px] bg-black text-white hover:bg-[#db4444] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      Add to Cart
-                    </button>
+                   
+                      <AddToCart  
+                        currency="USD"
+                        name={item.heading}
+                        description={item.description}
+                        price={item.price}
+                        image={item.image}
+                        key={item.id}
+                      />
+                   
                     <div className="p-4">
-                      <h2 className="text-xl font-semibold mb-2">
-                        {item.heading}
-                      </h2>
+                      <h2 className="text-xl font-semibold mb-2">{item.heading}</h2>
                       <p className="text-2xl font-bold text-gray-900">
                         ${item.price}{" "}
                         {item.cutprice && (
@@ -113,29 +140,6 @@ const Product = async () => {
                           </span>
                         )}
                       </p>
-                      <div className="flex items-center mb-2">
-                        {[...Array(Math.floor(item.rating))].map((_, i) => (
-                          <svg
-                            key={i}
-                            className="w-5 h-5 text-yellow-400"
-                            fill="currentColor"
-                            viewBox="0 0 20 20"
-                          >
-                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                          </svg>
-                        ))}
-
-                        {/* Handle the half star if applicable */}
-                        {item.rating % 1 >= 0.5 && (
-                          <svg
-                            className="w-5 h-5 text-yellow-400"
-                            fill="currentColor"
-                            viewBox="0 0 20 20"
-                          >
-                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                          </svg>
-                        )}
-                      </div>
                     </div>
                   </div>
                 </div>
@@ -144,12 +148,6 @@ const Product = async () => {
           ))}
         </CarouselContent>
       </Carousel>
-
-      <div className="flex items-center justify-center">
-        <button className="bg-[#db4444] text-[#fafafa] w-[234px] h-[56px] rounded-md">
-          View All Products
-        </button>
-      </div>
     </div>
   );
 };
