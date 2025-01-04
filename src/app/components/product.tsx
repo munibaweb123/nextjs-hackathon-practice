@@ -16,7 +16,7 @@ import { client } from "@/sanity/lib/client";
 import AddToCart from "./AddToCart";
 
 interface Product {
-  id: string;
+  id: number;
   image: string;
   alt: string;
   heading: string;
@@ -127,7 +127,9 @@ const Product = () => {
                         description={item.description}
                         price={item.price}
                         image={item.image}
+                        id={item.id}
                         key={item.id}
+                        
                       />
                    
                     <div className="p-4">
