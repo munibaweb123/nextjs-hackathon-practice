@@ -12,6 +12,7 @@ import {
 import { useShoppingCart } from "use-shopping-cart";
 import { Button } from "./ui/button";
 import Image from "next/image";
+import Link from "next/link";
 
 
 export default function ShoppingCartModal() {
@@ -77,7 +78,7 @@ export default function ShoppingCartModal() {
               <p className="mt-0.5 text-sm text-gray-500">Sipping and taxes are calculated at checkout.</p>
              <div>
              <button className="w-full bg-[#db4444]">
-               Checkout
+               <Link href={"/cart"}>Your Cart</Link>
               </button>
 
              </div>

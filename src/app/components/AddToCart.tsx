@@ -24,6 +24,6 @@ export default function AddToCart({name,description,price,currency,image}:Produc
         id:""
     }
     return(
-        <Button onClick={()=>{addItem(Product);handleCartClick()}}><Link href={"/cart"}>Add to Cart</Link></Button>
+        <Button onClick={()=>{addItem(Product);handleCartClick()}}>Add to Cart</Button>
     )
 }
