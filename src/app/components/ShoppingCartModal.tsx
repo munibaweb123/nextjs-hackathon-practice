@@ -12,6 +12,7 @@ import {
 import { useShoppingCart } from "use-shopping-cart";
 import { Button } from "./ui/button";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function ShoppingCartModal() {
   const { cartCount, shouldDisplayCart, handleCartClick, cartDetails,removeItem, totalPrice } = useShoppingCart();
@@ -75,9 +76,9 @@ export default function ShoppingCartModal() {
             </div>
               <p className="mt-0.5 text-sm text-gray-500">Sipping and taxes are calculated at checkout.</p>
              <div>
-             <Button className="w-full bg-[#db4444]" onClick={() => window.location.href = '/checkout'}>
-                Checkout
-              </Button>
+             <button className="w-full bg-[#db4444]">
+               <Link href={"/checkout"}> Checkout</Link>
+              </button>
 
              </div>
              <div className="flex justify-center gap-x-4">
