@@ -32,8 +32,8 @@ export default function ShoppingCartModal() {
         </SheetHeader>
         
         <div className="h-full flex flex-col justify-between">
-          <div className="mt-8 flex-1 overflow-y-auto">
-            <ul className="-my-8 divide-y divide-gray-200">
+          <div className="mt-10 flex-1 overflow-y-auto">
+            <ul className="-my-5 divide-y divide-gray-200">
               {cartCount === 0 ? (
                 <h1 className="text-2xl py-6">You don&apos;t have any items</h1>
               ) : (
@@ -77,7 +77,7 @@ export default function ShoppingCartModal() {
             </div>
               <p className="mt-0.5 text-sm text-gray-500">Sipping and taxes are calculated at checkout.</p>
              <div>
-             <button className="w-full bg-[#db4444]">
+             <button className="w-full bg-[#db4444] text-white">
                <Link href={"/cart"}>Your Cart</Link>
               </button>
 
