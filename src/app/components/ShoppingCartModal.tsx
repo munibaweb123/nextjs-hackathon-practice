@@ -10,7 +10,7 @@ import {
 } from "@/components/ui/sheet";
 
 import { useShoppingCart } from "use-shopping-cart";
-import { Button } from "./ui/button";
+import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
 

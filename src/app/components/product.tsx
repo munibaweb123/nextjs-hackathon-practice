@@ -10,7 +10,7 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "../components/ui/carousel";
+} from "@/components/ui/carousel";
 
 import { client } from "@/sanity/lib/client";
 import AddToCart from "./AddToCart";

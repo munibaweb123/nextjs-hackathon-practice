@@ -6,6 +6,9 @@ import { FaHeart, FaRedo, FaShippingFast, FaStar } from 'react-icons/fa';
 import Wishlist from '../../components/wishlist';
 
 
+
+
+
 interface Product {
   image: string;
   alt: string;

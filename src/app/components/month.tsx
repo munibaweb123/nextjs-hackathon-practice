@@ -1,8 +1,8 @@
 import Image from 'next/image';
 import React from 'react';
 import { FaEye, FaRegHeart } from 'react-icons/fa';
-import { Carousel, CarouselContent, CarouselItem } from '../components/ui/carousel';
-import { Card} from "../components/ui/card";
+import { Carousel, CarouselContent, CarouselItem } from '@/components/ui/carousel';
+import { Card} from "@/components/ui/card";
 
 const Month = () => {
   const products = [

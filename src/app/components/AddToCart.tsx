@@ -1,6 +1,6 @@
 'use client'
 import { useShoppingCart } from "use-shopping-cart";
-import { Button } from "./ui/button";
+import { Button } from "@/components/ui/button";
 import { urlFor } from "@/sanity/lib/image";
 
 

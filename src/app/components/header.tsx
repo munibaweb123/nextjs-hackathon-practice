@@ -4,7 +4,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import { FaSearch, FaHeart, FaShoppingCart, FaBars, FaTimes } from 'react-icons/fa'
 import { MdPerson } from "react-icons/md";
 import { useShoppingCart } from 'use-shopping-cart';
-import { Button } from './ui/button';
+import { Button } from '@/components/ui/button';
 
 const Header = () => {
   const {handleCartClick}=useShoppingCart();
