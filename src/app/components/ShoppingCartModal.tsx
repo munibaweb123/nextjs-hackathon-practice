@@ -13,6 +13,7 @@ import { useShoppingCart } from "use-shopping-cart";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
+import { Trash } from "lucide-react";
 
 
 export default function ShoppingCartModal() {
@@ -58,7 +59,7 @@ export default function ShoppingCartModal() {
                                 <p className="text-gray-500">QTY: {entry.quantity}</p>
                                 <button type="button" className="font-medium text-[#db4444] hover:text-[#db4444]/80"
                                 onClick={()=>removeItem(entry.id)}>
-                                Remove
+                                <Trash/>
                                 </button>
                             </div>
                         </div>

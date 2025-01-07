@@ -1,4 +1,5 @@
 "use client";
+import { Trash } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -90,7 +91,7 @@ const CartPage = () => {
                         className="text-red-500 hover:underline"
                         onClick={() => removeItem(item.id)}
                       >
-                        Remove
+                        <Trash/>
                       </button>
                     </td>
                   </tr>
